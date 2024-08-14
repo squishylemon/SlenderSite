@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slender: The Eight Pages Remake</title>
+    <style>
+        body {
+            color: #999999;
+            background-color: #000000;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        a {
+            color: #FFFFFF;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .logo-container {
+            position: relative;
+            width: 1000px;
+            height: auto;
+            margin: 50px auto 30px;
+            overflow: hidden;
+            /* Clip the logo overflow */
+        }
+
+        .logo {
+            
+            width: 100%;
+            /* Remove filter property to make the logo fully visible */
+            transition: filter 0.5s ease-in-out;
+            /* Smooth transition for filter change */
+            position: relative;
+            z-index: 1;
+            /* Ensure the logo is above other elements */
+        }
+
+        .button-container {
+            margin-top: 30px;
+        }
+
+        .button {
+            display: inline-block;
+            color: #FFFFFF;
+            padding: 10px 20px;
+            margin: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            font-family: 'Slender', Arial, sans-serif;
+            font-size: 56px;
+        }
+
+        .site-heading {
+            font-size: 14px;
+            font-family: 'Times New Roman', Times, serif;
+            margin-bottom: 10px;
+            /* Adjust margin-bottom to bring closer to the version text */
+        }
+
+        .version-text {
+            font-family: 'Times New Roman', Times, serif;
+            margin-top: -10px;
+            /* Adjust margin-top to bring closer to the heading */
+            margin-bottom: 30px;
+        }
+
+        .externalink-text {
+            font-size: 25px;
+            font-family: 'Times New Roman', Times, serif;
+
+        }
+
+        .spotlight {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            background-image: radial-gradient(circle,
+                    transparent 160px,
+                    rgba(0, 0, 0, 0.85) 200px);
+        }
+    </style>
+
+    <style>
+        @font-face {
+            font-family: 'Slender';
+            src: url('slender.ttf') format('truetype');
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        <audio id="staticAudio" src="static_buzz.mp3"></audio>
+
+        <h1 class="site-heading">Official site for Slender: The Eight Pages Remake</h1>
+        <p class="version-text">Current version: alpha v0.0.1</p>
+        <p class="externalink-text">Click here for <a href="http://www.parsecproductions.net/slender/">Slender: Eight
+                Pages Official</a> (The original slender game)</p>
+                
+        <div class="logo-container" id="logoContainer">
+            
+            <img src="banner.gif" alt="Slender Logo" class="logo" id="logoImage">
+            <img src="static.gif" alt="Slender Logo GIF" class="logo" id="gifImage" style="display: none;">
+        </div>
+        
+        <div class="button-container">
+            <a href="about.html" class="button">ABOUT</a>
+            <a href="news.html" class="button">NEWS</a>
+            <a href="game.html" class="button">GAME</a>
+        </div>
+        <p><a href="https://squishylemon007.itch.io/slenderman-eight-pages-remake/devlog/680734/website-creation">Development
+                Blogs</a></p>
+    </center>
+
+    <script>
+        setInterval(function () {
+            var logoImage = document.getElementById('logoImage');
+            var gifImage = document.getElementById('gifImage');
+
+            if (logoImage.style.display === 'none') {
+                logoImage.style.display = 'block';
+                gifImage.style.display = 'none';
+            } else {
+                // Switch to the GIF quickly within 0.5 seconds
+                gifImage.style.display = 'block';
+                logoImage.style.display = 'none';
+                // After 4 seconds, switch back to the logo
+
+                // Play the audio when the static GIF is displayed
+            staticAudio.play();
+
+                setTimeout(function () {
+                    gifImage.style.display = 'none';
+                    logoImage.style.display = 'block';
+                }, 500); // Set 3.5 seconds here to make the total transition time to be 4 seconds
+            }
+        }, 4000); // Switch every 4 seconds
+
+        window.addEventListener("DOMContentLoaded", () => {
+
+            const spotlight = document.querySelector('.spotlight');
+
+            let spotlightSize = 'transparent 160px, rgba(0, 0, 0, 0.85) 200px)';
+
+            window.addEventListener('mousemove', e => updateSpotlight(e));
+
+            window.addEventListener('mousedown', e => {
+
+                spotlightSize = 'transparent 130px, rgba(0, 0, 0, 0.95) 150px)';
+
+                updateSpotlight(e);
+
+            });
+
+            window.addEventListener('mouseup', e => {
+
+                spotlightSize = 'transparent 160px, rgba(0, 0, 0, 0.85) 200px)';
+
+                updateSpotlight(e);
+
+            });
+
+            function updateSpotlight(e) {
+
+                spotlight.style.backgroundImage = `radial-gradient(circle at ${e.pageX / window.innerWidth * 100}% ${e.pageY / window.innerHeight * 100}%, ${spotlightSize}`;
+
+            }
+        });
+    </script>
+</body>
+
+</html>

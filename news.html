@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slender: The Eight Pages Remake</title>
+    
+    <style>
+        body {
+            color: #999999;
+            background-color: #000000;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        a {
+            color: #FFFFFF;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .logo-container {
+            position: relative;
+            width: 1000px;
+            height: auto;
+            margin: 50px auto 30px;
+            overflow: hidden;
+            /* Clip the logo overflow */
+        }
+
+        .logo {
+
+            width: 100%;
+            /* Remove filter property to make the logo fully visible */
+            transition: filter 0.5s ease-in-out;
+            /* Smooth transition for filter change */
+            position: relative;
+            z-index: 1;
+            /* Ensure the logo is above other elements */
+        }
+
+        .button-container {
+            margin-top: 30px;
+        }
+
+        .button {
+            display: inline-block;
+            color: #FFFFFF;
+            padding: 10px 20px;
+            margin: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            font-family: 'Slender', Arial, sans-serif;
+            font-size: 56px;
+        }
+
+        .site-heading {
+            font-size: 14px;
+            font-family: 'Times New Roman', Times, serif;
+            margin-bottom: 10px;
+            /* Adjust margin-bottom to bring closer to the version text */
+        }
+
+        .version-text {
+            font-family: 'Times New Roman', Times, serif;
+            margin-top: -10px;
+            /* Adjust margin-top to bring closer to the heading */
+            margin-bottom: 30px;
+        }
+
+        .externalink-text {
+            font-size: 25px;
+            font-family: 'Times New Roman', Times, serif;
+
+        }
+
+        .about-text {
+            font-size: 25px;
+            font-family: 'Slender', sans-serif;
+
+        }
+
+        .date-text {
+            color: #FFFFFF;
+            font-size: 38px;
+            margin-bottom: 10px;
+            font-weight: bold;
+            font-family: 'Slender', sans-serif;
+        }
+
+        .divider {
+            width: 100%;
+        }
+
+        .update-text {
+            color: #CCCCCC;
+            font-size: 16px;
+            line-height: 1.6;
+            font-family: 'Slender', sans-serif;
+        }
+    </style>
+
+    <style>
+        @font-face {
+            font-family: 'Slender';
+            src: url('slender.ttf') format('truetype');
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        <audio id="staticAudio" src="static_buzz.mp3"></audio>
+
+        <h1 class="site-heading">Official site for Slender: The Eight Pages Remake</h1>
+        <p class="version-text">Current version: alpha v0.0.1</p>
+        <p class="externalink-text">Click here for <a href="http://www.parsecproductions.net/slender/">Slender: Eight
+                Pages Official</a> (The original slender game)</p>
+
+        <div class="logo-container" id="logoContainer">
+            <h2 class="date-text">NEWS (17/02/2024)</h2>
+            <img src="divider.png" alt="Divider" class="divider">
+            <p class="update-text">
+                So, the first playable build is out in the wild. Very few friends of mine are testing, finding bugs, etc. The programming side is now completed, and it's just polishing and filling in the few models I'm still missing. I am hoping to release by the end of next week, but I cannot guarantee. Some might notice the VR button; this is going to be a feature but not on launch. Why? Because I want it to be a well-polished edition with a player belt to put pages and the torch/other extras, and to include standalone versions for the Quest 2 and 3. Why not 1? Mainly because of performance. It could be done, but because I don't own a Quest 1, it makes it too hard to guarantee proper performance. So, I do apologize in advance for any Quest 1 players.
+            </p>
+        </div>
+
+        <div class="button-container">
+
+            <a href="index.html" class="button">BACK</a>
+
+        </div>
+        <p><a href="https://squishylemon007.itch.io/slenderman-eight-pages-remake/devlog/683509/main-code-completed">Development
+                Blogs</a></p>
+    </center>
+
+
+</body>
+
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slender: The Eight Pages Remake</title>
+    
+    <style>
+        body {
+            color: #999999;
+            background-color: #000000;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        a {
+            color: #FFFFFF;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .logo-container {
+            position: relative;
+            width: 1000px;
+            height: auto;
+            margin: 50px auto 30px;
+            overflow: hidden;
+            /* Clip the logo overflow */
+        }
+
+        .logo {
+            
+            width: 100%;
+            /* Remove filter property to make the logo fully visible */
+            transition: filter 0.5s ease-in-out;
+            /* Smooth transition for filter change */
+            position: relative;
+            z-index: 1;
+            /* Ensure the logo is above other elements */
+        }
+
+        .button-container {
+            margin-top: 30px;
+        }
+
+        .button {
+            display: inline-block;
+            color: #FFFFFF;
+            padding: 10px 20px;
+            margin: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            font-family: 'Slender', Arial, sans-serif;
+            font-size: 56px;
+        }
+
+        .site-heading {
+            font-size: 14px;
+            font-family: 'Times New Roman', Times, serif;
+            margin-bottom: 10px;
+            /* Adjust margin-bottom to bring closer to the version text */
+        }
+
+        .version-text {
+            font-family: 'Times New Roman', Times, serif;
+            margin-top: -10px;
+            /* Adjust margin-top to bring closer to the heading */
+            margin-bottom: 30px;
+        }
+
+        .externalink-text {
+            font-size: 25px;
+            font-family: 'Times New Roman', Times, serif;
+
+        }
+        .about-text {
+            font-size: 25px;
+            font-family: 'Slender', sans-serif;
+
+        }
+    </style>
+
+    <style>
+        @font-face {
+            font-family: 'Slender';
+            src: url('slender.ttf') format('truetype');
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        <audio id="staticAudio" src="static_buzz.mp3"></audio>
+
+        <h1 class="site-heading">Official site for Slender: The Eight Pages Remake</h1>
+        <p class="version-text">Current version: alpha v0.0.1</p>
+        <p class="externalink-text">Click here for <a href="http://www.parsecproductions.net/slender/">Slender: Eight
+                Pages Official</a> (The original slender game)</p>
+                
+        <div class="logo-container" id="logoContainer">
+            <p class="about-text">Slender is a short, experimental horror game in which you must travel into a dark woods at nigh, with a simple goal: find 8 pages that are scattered accross the woods, But as you are looking for them, you are being stalked by an entity that grows more persistant and relentless as each page is collected, an entity that you cannot even look at for long, let alone fight. Your only hope is to collect all 8 pages before it catches you...</p>
+        </div>
+        
+        <div class="button-container">
+            
+            <a href="index.html" class="button">BACK</a>
+            
+        </div>
+        <p><a href="https://squishylemon007.itch.io/slenderman-eight-pages-remake/devlog/680734/website-creation">Development
+                Blogs</a></p>
+    </center>
+
+   
+</body>
+
+</html>
